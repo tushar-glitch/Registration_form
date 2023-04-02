@@ -44,39 +44,39 @@ const data_schema = new mongoose.Schema({
     domain: {
         type: String,
         required: true
-    },
-    why_Euphony: {
-        type: String,
-        // required: true
-    },
-    previous_exp: {
-        type: String,
-        // required: true
-    },
-    what_music_is_for_you: {
-        type: String,
-        // required: true
-    },
-    meaning_of_Euphony: {
-        type: String,
-        // required: true
-    },
-    achievement: {
-        type: String,
-        // required: true
-    },
-    have_you_learn_music: {
-        type: Boolean,
-        // required: true
-    },
-    favourite_singer_band: {
-        type: String,
-        required: true
-    },
-    type_of_song_you_like: {
-        type: String,
-        required: true
     }
+    // why_Euphony: {
+    //     type: String,
+    //     // required: true
+    // },
+    // previous_exp: {
+    //     type: String,
+    //     // required: true
+    // },
+    // what_music_is_for_you: {
+    //     type: String,
+    //     // required: true
+    // },
+    // meaning_of_Euphony: {
+    //     type: String,
+    //     // required: true
+    // },
+    // achievement: {
+    //     type: String,
+    //     // required: true
+    // },
+    // have_you_learn_music: {
+    //     type: Boolean,
+    //     // required: true
+    // },
+    // favourite_singer_band: {
+    //     type: String,
+    //     required: true
+    // },
+    // type_of_song_you_like: {
+    //     type: String,
+    //     required: true
+    // }
 })
 const data_Model = mongoose.model('list_of_students', data_schema)
 module.exports = data_Model;

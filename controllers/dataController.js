@@ -2,7 +2,7 @@ const data_Model = require("../models/dataModel")
 
 class dataController {
     static userRegistration = async (req, res) => {
-        const { name, dob, email, student_no, is_hosteler, branch, section, contact_no, year, domain, why_Euphony, previous_exp, what_music_is_for_you, meaning_of_Euphony, achievement, have_you_learn_music, favourite_singer_band, type_of_song_you_like} = req.body
+        const { name, dob, email, student_no, is_hosteler, branch, section, contact_no, year, domain,gender} = req.body
         if (name&&dob&&email&&student_no&&is_hosteler&&branch&&section&&contact_no&&year&&domain) {
             const isemail = await data_Model.findOne({ email: email })
             if (!isemail) {
@@ -17,14 +17,15 @@ class dataController {
                     contact_no: contact_no,
                     year: year,
                     domain: domain,
-                    why_Euphony: why_Euphony,
-                    previous_exp: previous_exp,
-                    what_music_is_for_you: what_music_is_for_you,
-                    meaning_of_Euphony: meaning_of_Euphony,
-                    achievement: achievement,
-                    have_you_learn_music: have_you_learn_music,
-                    favourite_singer_band: favourite_singer_band,
-                    type_of_song_you_like: type_of_song_you_like,
+                    gender:gender
+                    // why_Euphony: why_Euphony,
+                    // previous_exp: previous_exp,
+                    // what_music_is_for_you: what_music_is_for_you,
+                    // meaning_of_Euphony: meaning_of_Euphony,
+                    // achievement: achievement,
+                    // have_you_learn_music: have_you_learn_music,
+                    // favourite_singer_band: favourite_singer_band,
+                    // type_of_song_you_like: type_of_song_you_like,
                 })
                 // userController.sendotp(email,res)
                 const save_user = await new_user.save()
