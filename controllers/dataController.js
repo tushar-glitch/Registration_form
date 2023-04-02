@@ -3,7 +3,7 @@ const data_Model = require("../models/dataModel")
 class dataController {
     static userRegistration = async (req, res) => {
         const { name, dob, email, student_no, is_hosteler, branch, section, contact_no, year, domain, why_Euphony, previous_exp, what_music_is_for_you, meaning_of_Euphony, achievement, have_you_learn_music, favourite_singer_band, type_of_song_you_like} = req.body
-        if (name&&dob&&email&&student_no&&is_hosteler&&branch&&section&&contact_no&&year&&domain&&why_Euphony&&previous_exp&&what_music_is_for_you&&meaning_of_Euphony&&achievement&&have_you_learn_music&&favourite_singer_band&&type_of_song_you_like) {
+        if (name&&dob&&email&&student_no&&is_hosteler&&branch&&section&&contact_no&&year&&domain) {
             const isemail = await data_Model.findOne({ email: email })
             if (!isemail) {
                 const new_user = data_Model({

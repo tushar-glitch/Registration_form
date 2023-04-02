@@ -13,12 +13,16 @@ const data_schema = new mongoose.Schema({
         type: String,
         required: true
     },
+    gender: {
+        type: String,
+        required: true
+    },
     student_no: {
         type: Number,
         required: true
     },
     is_hosteler: {
-        type: Boolean,
+        type: String,
         required: true
     },
     branch: {
@@ -43,27 +47,27 @@ const data_schema = new mongoose.Schema({
     },
     why_Euphony: {
         type: String,
-        required: true
+        // required: true
     },
     previous_exp: {
         type: String,
-        required: true
+        // required: true
     },
     what_music_is_for_you: {
         type: String,
-        required: true
+        // required: true
     },
     meaning_of_Euphony: {
         type: String,
-        required: true
+        // required: true
     },
     achievement: {
         type: String,
-        required: true
+        // required: true
     },
     have_you_learn_music: {
         type: Boolean,
-        required: true
+        // required: true
     },
     favourite_singer_band: {
         type: String,
